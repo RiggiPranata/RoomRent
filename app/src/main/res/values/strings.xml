@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Room Rent</string>
+    <string name="menu_peminjam"> peminjam</string>
+    <string name="menu_profile">Profile</string>
+    <string name="logout">logout</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

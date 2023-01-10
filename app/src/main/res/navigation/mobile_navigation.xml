@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.roomrent.MainActivity"
+        android:label="activity_regitratiton"
+        tools:layout="@layout/activity_regitratiton" />
+    <fragment
+        android:id="@+id/peminjaman"
+        android:name="com.example.roomrent.peminjaman"
+        android:label="fragment_peminjaman"
+        tools:layout="@layout/fragment_peminjaman" >
+        <action
+            android:id="@+id/action_peminjaman_self"
+            app:destination="@id/peminjaman" />
+    </fragment>
+</navigation>
