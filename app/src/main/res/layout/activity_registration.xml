@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Registration">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/div1Registration"
+        android:paddingBottom="50dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Registration"
+            android:textSize="30sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:id="@+id/titleRegistration"
+            />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titleRegistration"
+            android:id="@+id/divNameRegist"
+            >
+            <TextView
+                android:id="@+id/lblNamaRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Nama"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtNamaRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblNamaRegis"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="example" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divNameRegist"
+            android:id="@+id/divEmailRegis"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lblEmailRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="E-mail"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtEmailRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblEmailRegis"
+                android:textColorHint="@color/ColorHint"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="example@email.xyz" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divEmailRegis"
+            android:id="@+id/divPasswordRegis"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lblPasswordRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Password"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtPasswordRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:layout_below="@+id/lblPasswordRegis"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="*********" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divPasswordRegis"
+            android:id="@+id/divNoTeleponRegis"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lblNoTeleponRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="No Telepon"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtNoTeleponRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblNoTeleponRegis"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                android:textColor="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="08**-****-****" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divNoTeleponRegis"
+            android:id="@+id/divKelasRegis"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lblKelasRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Kelas"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtKelasRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblKelasRegis"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="7 AM" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divKelasRegis"
+            android:id="@+id/divSemesterRegis"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lblSemesterRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Semester"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtSemesterRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblSemesterRegis"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="7" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divSemesterRegis"
+            android:id="@+id/divJurusanRegis"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lblJurusanRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Jurusan"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtJurusanRegis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblJurusanRegis"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:textColor="@color/white"
+                android:hint="Teknik Informatika" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/divButtonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divJurusanRegis"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+
+            >
+
+            <Button
+                android:id="@+id/buttonCancelRegis"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="20dp"
+                android:onClick="cancel"
+                style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/buttonSubmitRegis"
+                android:layout_width="150dp"
+                style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                android:layout_height="55dp"
+                android:layout_toEndOf="@+id/buttonCancelRegis"
+                android:text="Registration" />
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

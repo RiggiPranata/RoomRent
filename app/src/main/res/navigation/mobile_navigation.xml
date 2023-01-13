@@ -9,7 +9,7 @@
         android:id="@+id/mainActivity"
         android:name="com.example.roomrent.MainActivity"
         android:label="activity_regitratiton"
-        tools:layout="@layout/activity_regitratiton" />
+        tools:layout="@layout/activity_signup" />
     <fragment
         android:id="@+id/peminjaman"
         android:name="com.example.roomrent.peminjaman"

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".Login">
+
+    <RelativeLayout
+        android:id="@+id/div1Login"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="30dp">
+
+        <RelativeLayout
+            android:id="@+id/divIconLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_home_24"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/divFormLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/divIconLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:id="@+id/lblEmailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="E-mail"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtEmailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblEmailLogin"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                android:textColor="@color/white"
+                android:autofillHints="emailAddress"
+                android:shadowColor="@color/white"
+                android:hint="example@email.xyz" />
+
+            <TextView
+                android:id="@+id/lblPasswordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtEmailLogin"
+                android:layout_marginTop="20dp"
+                android:gravity="start"
+                android:text="Password"
+                android:textColor="@color/white" />
+
+            <EditText
+                android:id="@+id/txtPasswordLogin"
+                android:layout_width="match_parent"
+                android:textColor="@color/white"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                android:inputType="textPassword"
+                android:shadowColor="@color/white"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblPasswordLogin"
+                android:hint="********" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/divButtonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divFormLogin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+
+            >
+
+            <Button
+                android:id="@+id/buttonLogin"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="10dp"
+                style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                android:onClick="login"
+                android:text="Login" />
+
+            <Button
+                android:id="@+id/buttonRegistration"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:onClick="registration"
+                style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                android:layout_toEndOf="@+id/buttonLogin"
+                android:text="Registration"
+                 />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divButtonLogin"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/white"
+            android:text="lupa password.."
+            />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/div1Login"
+        android:layout_centerHorizontal="true"
+        android:text="© Roomrent 2023"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/primary"
+        android:textSize="17sp"
+        android:gravity="bottom|center"
+        />
+</RelativeLayout>
