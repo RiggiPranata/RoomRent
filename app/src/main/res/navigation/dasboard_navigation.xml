@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dasboard_navigation"
+    app:startDestination="@id/room">
+
+    <activity
+        android:id="@+id/room"
+        android:name="com.example.roomrent.Room"
+        android:label="activity_room"
+        tools:layout="@layout/activity_room">
+        <action
+            android:id="@+id/action_dash"
+            app:destination="@id/dashboard" />
+
+    </activity>
+    <activity
+        android:id="@+id/dashboard"
+        android:name="com.example.roomrent.Dashboard"
+        android:label="activity_dashboard"
+        tools:layout="@layout/activity_dashboard">
+    <action
+        android:id="@+id/action_room"
+        app:destination="@id/room" />
+    </activity>
+</navigation>

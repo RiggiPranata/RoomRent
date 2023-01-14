@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@color/primary"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:padding="5dp"
+        android:layout_marginBottom="10dp"
+        >
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_gravity="center"
+            android:layout_height="40dp"
+            android:src="@drawable/icon"
+            android:id="@+id/imageRoom"
+            android:layout_marginRight="15dp"
+            />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+            <TextView
+                android:id="@+id/nameRoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kelas 1.1A"
+                android:textSize="15dp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lantai 3"
+                android:textColor="@color/ColorHint"
+                android:textSize="12dp"
+                android:id="@+id/floorRoom"
+                android:layout_below="@id/nameRoom"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gedung A"
+                android:textSize="12dp"
+                android:textColor="@color/ColorHint"
+                android:id="@+id/buildingRoom"
+                android:layout_below="@id/floorRoom"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/isReady"
+                android:text="Available"
+                android:textColor="@color/highlight"
+                android:textStyle="bold"
+                android:layout_toEndOf="@id/nameRoom"
+                android:layout_marginLeft="30dp"
+                />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
