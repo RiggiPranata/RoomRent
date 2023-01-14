@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/secondary"
+    tools:context=".DetailRoom">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/DetailTitelRoom"
+            android:text="Detail Ruangan"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp"
+        />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_below="@id/DetailTitelRoom"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblNamaRoom"
+            android:text="Nama Kelas   : "
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:id="@+id/nameRoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kelas 1.1A"
+            android:textSize="15sp"
+            android:layout_below="@id/DetailTitelRoom"
+            android:layout_toRightOf="@id/lblNamaRoom"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblFlootRoom"
+            android:layout_below="@id/lblNamaRoom"
+            android:text="Lantai             : "
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:id="@+id/floorRoom"
+            android:layout_below="@id/nameRoom"
+            android:layout_toRightOf="@+id/lblFlootRoom"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblBuildingRoom"
+            android:layout_below="@id/lblFlootRoom"
+            android:text="Bangunan      : "
+            android:textSize="15sp"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gedung A"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:id="@+id/buildingRoom"
+            android:layout_marginBottom="8dp"
+            android:layout_toRightOf="@id/lblBuildingRoom"
+            android:layout_marginRight="10dp"
+            android:layout_below="@id/floorRoom"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblReadyRoom"
+            android:layout_below="@id/lblBuildingRoom"
+            android:text="Ketersediaan : "
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/isReady"
+            android:text="Available"
+            android:textColor="@color/highlight"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:layout_below="@id/buildingRoom"
+            android:layout_toEndOf="@id/lblReadyRoom"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

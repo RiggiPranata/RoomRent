@@ -1,15 +1,314 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".peminjaman">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="match_parent">
 
-        android:text="@string/hello_blank_fragment" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="30dp"
+        android:id="@+id/div1peminjaman"
+        android:paddingBottom="50dp"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Peminajaman Ruangan"
+            android:textSize="30sp"
+            android:textColor="@color/primary"
+            android:textStyle="bold"
+            android:textAllCaps="true"
+            android:layout_marginBottom="40dp"
+            android:gravity="center"
+            android:id="@+id/titlepeminjam"
+            />
 
-</FrameLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/titlepeminjam"
+            android:id="@+id/divNamePmn">
+            <TextView
+                android:id="@+id/lblNamaPemin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Nama"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtNamaPeminjam"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblNamaPemin"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="example" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divNamePmn"
+            android:id="@+id/divUserPmn"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lblUserPemin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="User Id"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtuser"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblUserPemin"
+                android:textColorHint="@color/ColorHint"
+                android:textColor="@color/white"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="User id " />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divUserPmn"
+            android:id="@+id/divTimeStart"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lbltimestr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Time Start"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtTimeStart"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/white"
+                android:layout_below="@+id/lbltimestr"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="00:00:00"
+                android:layout_toStartOf="@+id/btnstart"/>
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbltimestr"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="-6dp"
+                android:src="@drawable/ic_baseline_more_time_24"
+                android:id="@+id/btnstart"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divTimeStart"
+            android:id="@+id/divTimeEnd"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lbltimeend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Time End"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtTimeEnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbltimeend"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                android:textColor="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="00:00:00"
+                android:layout_toStartOf="@+id/btnend"/>
+            />
+            <ImageButton
+                android:id="@+id/btnend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbltimeend"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="-6dp"
+                android:src="@drawable/ic_baseline_more_time_24" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divTimeEnd"
+            android:id="@+id/divdate"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lbldate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Date"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbldate"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="d/d/my"
+                android:layout_toStartOf="@+id/btndate"/>
+
+            <ImageButton
+                android:id="@+id/btndate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lbldate"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="1dp"
+                android:layout_marginEnd="-6dp"
+
+                android:src="@drawable/ic_baseline_date_range_24" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divdate"
+            android:id="@+id/divRemark"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lblremark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Remark"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtRemark"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblremark"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColor="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:hint="Komerntar" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divRemark"
+            android:id="@+id/divJurusanRegis"
+            android:layout_marginTop="10dp"
+            >
+            <TextView
+                android:id="@+id/lblvalid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="Is Valid"
+                android:textColor="@color/white"
+                />
+
+            <EditText
+                android:id="@+id/txtValid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lblvalid"
+                android:textColorHint="@color/ColorHint"
+                android:textColorHighlight="@color/white"
+                android:textColorLink="@color/white"
+                android:shadowColor="@color/white"
+                android:textColor="@color/white"
+                android:hint="Teknik Informatika" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/divButtonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/divJurusanRegis"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+
+            >
+
+            <Button
+                android:id="@+id/buttonCancelPeminjam"
+                android:layout_width="150dp"
+                android:layout_height="55dp"
+                android:layout_marginRight="20dp"
+                android:onClick="cancel"
+                style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                android:text="Cancel" />
+
+            <Button
+                android:id="@+id/buttonSubmitPinjsm"
+                android:layout_width="150dp"
+                style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                android:layout_height="55dp"
+                android:layout_toEndOf="@+id/buttonCancelPeminjam"
+                android:text="Submit" />
+        </RelativeLayout>
+    </RelativeLayout>
+    </ScrollView>
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+</RelativeLayout>
