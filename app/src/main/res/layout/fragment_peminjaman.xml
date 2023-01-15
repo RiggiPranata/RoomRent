@@ -24,7 +24,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Peminajaman Ruangan"
+            android:text="Peminjaman Ruangan"
             android:textSize="30sp"
             android:textColor="@color/primary"
             android:textStyle="bold"
@@ -38,43 +38,43 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/titlepeminjam"
-            android:id="@+id/divNamePmn">
+            android:id="@+id/divNameRoom">
             <TextView
-                android:id="@+id/lblNamaPemin"
+                android:id="@+id/lblNamaRuangan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:text="Nama"
+                android:text="Nama Ruangan"
                 android:textColor="@color/white"
                 />
 
             <EditText
-                android:id="@+id/txtNamaPeminjam"
+                android:id="@+id/txtNamaRuangan"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/lblNamaPemin"
+                android:layout_below="@+id/lblNamaRuangan"
                 android:textColorHint="@color/ColorHint"
                 android:textColorHighlight="@color/white"
                 android:textColor="@color/white"
                 android:textColorLink="@color/white"
                 android:shadowColor="@color/white"
-                android:hint="example" />
+                android:hint="Kelas 1.1A" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/divNamePmn"
-            android:id="@+id/divUserPmn"
+            android:layout_below="@id/divNameRoom"
+            android:id="@+id/divNoTeleponRent"
             android:layout_marginTop="10dp"
             >
             <TextView
-                android:id="@+id/lblUserPemin"
+                android:id="@+id/lblNoTeleponRent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="start"
-                android:text="User Id"
+                android:text="No Telepon"
                 android:textColor="@color/white"
                 />
 
@@ -82,20 +82,20 @@
                 android:id="@+id/txtuser"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/lblUserPemin"
+                android:layout_below="@+id/lblNoTeleponRent"
                 android:textColorHint="@color/ColorHint"
                 android:textColor="@color/white"
                 android:textColorHighlight="@color/white"
                 android:textColorLink="@color/white"
                 android:shadowColor="@color/white"
-                android:hint="User id " />
+                android:hint="08**-****-****" />
 
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/divUserPmn"
+            android:layout_below="@id/divNoTeleponRent"
             android:id="@+id/divTimeStart"
             android:layout_marginTop="10dp"
             >
@@ -112,7 +112,7 @@
                 android:id="@+id/txtTimeStart"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:inputType="textPassword"
+                android:inputType="time"
                 android:textColor="@color/white"
                 android:layout_below="@+id/lbltimestr"
                 android:textColorHint="@color/ColorHint"
@@ -128,7 +128,7 @@
                 android:layout_below="@+id/lbltimestr"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="1dp"
-                android:layout_marginEnd="-6dp"
+                android:background="@color/background"
                 android:src="@drawable/ic_baseline_more_time_24"
                 android:id="@+id/btnstart"/>
 
@@ -156,6 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/lbltimeend"
                 android:textColorHint="@color/ColorHint"
+                android:inputType="time"
                 android:textColorHighlight="@color/white"
                 android:textColorLink="@color/white"
                 android:textColor="@color/white"
@@ -170,7 +171,7 @@
                 android:layout_below="@+id/lbltimeend"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="1dp"
-                android:layout_marginEnd="-6dp"
+                android:background="@color/background"
                 android:src="@drawable/ic_baseline_more_time_24" />
 
         </RelativeLayout>
@@ -198,10 +199,11 @@
                 android:layout_below="@+id/lbldate"
                 android:textColorHint="@color/ColorHint"
                 android:textColorHighlight="@color/white"
+                android:inputType="date"
                 android:textColor="@color/white"
                 android:textColorLink="@color/white"
                 android:shadowColor="@color/white"
-                android:hint="d/d/my"
+                android:hint="1990-12-28"
                 android:layout_toStartOf="@+id/btndate"/>
 
             <ImageButton
@@ -211,8 +213,7 @@
                 android:layout_below="@+id/lbldate"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="1dp"
-                android:layout_marginEnd="-6dp"
-
+                android:background="@color/background"
                 android:src="@drawable/ic_baseline_date_range_24" />
 
 
@@ -244,37 +245,7 @@
                 android:textColor="@color/white"
                 android:textColorLink="@color/white"
                 android:shadowColor="@color/white"
-                android:hint="Komerntar" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/divRemark"
-            android:id="@+id/divJurusanRegis"
-            android:layout_marginTop="10dp"
-            >
-            <TextView
-                android:id="@+id/lblvalid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="start"
-                android:text="Is Valid"
-                android:textColor="@color/white"
-                />
-
-            <EditText
-                android:id="@+id/txtValid"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/lblvalid"
-                android:textColorHint="@color/ColorHint"
-                android:textColorHighlight="@color/white"
-                android:textColorLink="@color/white"
-                android:shadowColor="@color/white"
-                android:textColor="@color/white"
-                android:hint="Teknik Informatika" />
+                android:hint="Keterangan" />
 
         </RelativeLayout>
 
@@ -282,27 +253,18 @@
             android:id="@+id/divButtonLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/divJurusanRegis"
+            android:layout_below="@id/divRemark"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="20dp"
 
             >
 
             <Button
-                android:id="@+id/buttonCancelPeminjam"
-                android:layout_width="150dp"
-                android:layout_height="55dp"
-                android:layout_marginRight="20dp"
-                android:onClick="cancel"
-                style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
-                android:text="Cancel" />
-
-            <Button
-                android:id="@+id/buttonSubmitPinjsm"
+                android:id="@+id/buttonSubmitPinjaman"
                 android:layout_width="150dp"
                 style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
                 android:layout_height="55dp"
-                android:layout_toEndOf="@+id/buttonCancelPeminjam"
+                android:layout_centerHorizontal="true"
                 android:text="Submit" />
         </RelativeLayout>
     </RelativeLayout>

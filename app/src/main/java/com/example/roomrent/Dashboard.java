@@ -44,7 +44,7 @@ public class Dashboard extends AppCompatActivity {
                     case R.id.rent:
                         //aksi ketika profile di klik
                         //                tulisan.setText("Tombol rent diklik");
-                        selectedFragment = new RentFragment();
+                        selectedFragment = new peminjaman();
                         Log.d("rent_nav", "success move to rent screen");
                         break;
                     case R.id.history:
