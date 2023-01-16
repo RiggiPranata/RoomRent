@@ -3,35 +3,36 @@ package com.example.roomrent;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import com.google.gson.annotations.SerializedName;
+
+import java.io.Serializable;
+
 public class Rooms implements Parcelable {
-    private String name_room;
+//    @SerializedName("room_id")
+//    private int room_id;
+    @SerializedName("room_name")
+    private String room_name;
+    @SerializedName("floor")
     private String floor;
+    @SerializedName("building")
     private String building;
-    private String title;
+    @SerializedName("is_ready")
     private String is_ready;
 
-    public Rooms(String name_room, String floor, String building, String is_ready) {
-        this.name_room = name_room;
+    public Rooms(String room_name, String floor, String building, String is_ready) {
+        this.room_name = room_name;
         this.floor = floor;
         this.building = building;
         this.is_ready = is_ready;
-        this.title = title;
     }
 
-    public String getTitle() {
-        return title;
+
+    public String getRoom_name() {
+        return room_name;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getName_room() {
-        return name_room;
-    }
-
-    public void setName_room(String name_room) {
-        this.name_room = name_room;
+    public void setRoom_name(String room_name) {
+        this.room_name = room_name;
     }
 
     public String getFloor() {
@@ -66,26 +67,23 @@ public class Rooms implements Parcelable {
 
     @Override
     public void writeToParcel(Parcel dest, int flags) {
-        dest.writeString(this.name_room);
+        dest.writeString(this.room_name);
         dest.writeString(this.floor);
         dest.writeString(this.building);
-        dest.writeString(this.title);
         dest.writeString(this.is_ready);
     }
 
     public void readFromParcel(Parcel source) {
-        this.name_room = source.readString();
+        this.room_name = source.readString();
         this.floor = source.readString();
         this.building = source.readString();
-        this.title = source.readString();
         this.is_ready = source.readString();
     }
 
     protected Rooms(Parcel in) {
-        this.name_room = in.readString();
+        this.room_name = in.readString();
         this.floor = in.readString();
         this.building = in.readString();
-        this.title = in.readString();
         this.is_ready = in.readString();
     }
 
@@ -101,3 +99,4 @@ public class Rooms implements Parcelable {
         }
     };
 }
+

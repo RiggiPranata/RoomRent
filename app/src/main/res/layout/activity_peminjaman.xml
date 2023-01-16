@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".peminjaman">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:id="@+id/div1peminjaman"
+            android:paddingBottom="50dp"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Peminjaman Ruangan"
+                android:textSize="30sp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"
+                android:textAllCaps="true"
+                android:layout_marginBottom="40dp"
+                android:gravity="center"
+                android:id="@+id/titlepeminjam"
+                />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/titlepeminjam"
+                android:id="@+id/divNameRoom">
+                <TextView
+                    android:id="@+id/lblNamaRuangan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Nama Ruangan"
+                    android:textColor="@color/white"
+                    />
+
+                <EditText
+                    android:id="@+id/txtNamaRuangan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblNamaRuangan"
+                    android:textColorHint="@color/ColorHint"
+                    android:textColorHighlight="@color/white"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
+                    android:shadowColor="@color/white"
+                    android:hint="Kelas 1.1A" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divNameRoom"
+                android:id="@+id/divNoTeleponRent"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:id="@+id/lblNoTeleponRent"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="No Telepon"
+                    android:textColor="@color/white"
+                    />
+
+                <EditText
+                    android:id="@+id/txtuser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblNoTeleponRent"
+                    android:textColorHint="@color/ColorHint"
+                    android:textColor="@color/white"
+                    android:textColorHighlight="@color/white"
+                    android:textColorLink="@color/white"
+                    android:shadowColor="@color/white"
+                    android:hint="08**-****-****" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divNoTeleponRent"
+                android:id="@+id/divTimeStart"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:id="@+id/lbltimestr"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Time Start"
+                    android:textColor="@color/white"
+                    />
+
+                <EditText
+                    android:id="@+id/txtTimeStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="time"
+                    android:textColor="@color/white"
+                    android:layout_below="@+id/lbltimestr"
+                    android:textColorHint="@color/ColorHint"
+                    android:textColorHighlight="@color/white"
+                    android:textColorLink="@color/white"
+                    android:shadowColor="@color/white"
+                    android:hint="00:00:00"
+                    android:layout_toStartOf="@+id/btnstart"/>
+
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbltimestr"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/background"
+                    android:src="@drawable/ic_baseline_more_time_24"
+                    android:id="@+id/btnstart"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divTimeStart"
+                android:id="@+id/divTimeEnd"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:id="@+id/lbltimeend"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Time End"
+                    android:textColor="@color/white"
+                    />
+
+                <EditText
+                    android:id="@+id/txtTimeEnd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbltimeend"
+                    android:textColorHint="@color/ColorHint"
+                    android:inputType="time"
+                    android:textColorHighlight="@color/white"
+                    android:textColorLink="@color/white"
+                    android:textColor="@color/white"
+                    android:shadowColor="@color/white"
+                    android:hint="00:00:00"
+                    android:layout_toStartOf="@+id/btnend"/>
+                />
+                <ImageButton
+                    android:id="@+id/btnend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbltimeend"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/background"
+                    android:src="@drawable/ic_baseline_more_time_24" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divTimeEnd"
+                android:id="@+id/divdate"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:id="@+id/lbldate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Date"
+                    android:textColor="@color/white"
+                    />
+
+                <EditText
+                    android:id="@+id/txtdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbldate"
+                    android:textColorHint="@color/ColorHint"
+                    android:textColorHighlight="@color/white"
+                    android:inputType="date"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
+                    android:shadowColor="@color/white"
+                    android:hint="1990-12-28"
+                    android:layout_toStartOf="@+id/btndate"/>
+
+                <ImageButton
+                    android:id="@+id/btndate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lbldate"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="1dp"
+                    android:background="@color/background"
+                    android:src="@drawable/ic_baseline_date_range_24" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divdate"
+                android:id="@+id/divRemark"
+                android:layout_marginTop="10dp"
+                >
+                <TextView
+                    android:id="@+id/lblremark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="start"
+                    android:text="Remark"
+                    android:textColor="@color/white"
+                    />
+
+                <EditText
+                    android:id="@+id/txtRemark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/lblremark"
+                    android:textColorHint="@color/ColorHint"
+                    android:textColorHighlight="@color/white"
+                    android:textColor="@color/white"
+                    android:textColorLink="@color/white"
+                    android:shadowColor="@color/white"
+                    android:hint="Keterangan" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/divButtonLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divRemark"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+
+                >
+
+                <Button
+                    android:id="@+id/buttonSubmitPinjaman"
+                    android:layout_width="150dp"
+                    style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
+                    android:layout_height="55dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Submit" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>

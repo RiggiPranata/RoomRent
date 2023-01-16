@@ -7,24 +7,34 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.Toolbar;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
+import com.google.android.material.snackbar.Snackbar;
 
 @SuppressWarnings("ALL")
 public class Dashboard extends AppCompatActivity {
+
+    SharedPreferences sharedPreferences;
 
     private BottomNavigationView bottomNav;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
+//        Toolbar toolbar = findViewById(R.id.toolbar);
         replaceFragment(new HomeFragment());
         bottomNav = findViewById(R.id.bottomNav);
+        sharedPreferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(this);
+        String emailUser = sharedPreferences.getString(Login.KEY_USER, null);
+//        Snackbar.make(tool)
+
         getSupportFragmentManager().beginTransaction().replace(R.id.divFragment, new HomeFragment()).commit();
 
         bottomNav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener(){
@@ -44,7 +54,7 @@ public class Dashboard extends AppCompatActivity {
                     case R.id.rent:
                         //aksi ketika profile di klik
                         //                tulisan.setText("Tombol rent diklik");
-                        selectedFragment = new peminjaman();
+//                        selectedFragment = new peminjaman();
                         Log.d("rent_nav", "success move to rent screen");
                         break;
                     case R.id.history:

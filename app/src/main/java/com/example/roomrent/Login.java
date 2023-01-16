@@ -11,7 +11,7 @@ import android.widget.EditText;
 
 public class Login extends AppCompatActivity {
     EditText EmailLogin, PasswordLogin;
-    SharedPreferences sharedPref;
+    SharedPreferences sharedPreferences;
     static String KEY_USER = "email_user";
 
     @Override
@@ -21,14 +21,21 @@ public class Login extends AppCompatActivity {
 
         EmailLogin = findViewById(R.id.txtEmailLogin);
         PasswordLogin = findViewById(R.id.txtPasswordLogin);
-        sharedPref = androidx.preference.PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPreferences = androidx.preference.PreferenceManager.getDefaultSharedPreferences(this);
+
+        String emailUser = sharedPreferences.getString(Login.KEY_USER, null);
+        if (emailUser != null){
+            startActivity(new Intent(this, screen_home.class));
+        }
 
     }
 
     public void login(View v){
         String emailUser = EmailLogin.getText().toString();
-
-        startActivity(new Intent(this, Dashboard.class));
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString(KEY_USER, emailUser);
+        editor.commit();
+        startActivity(new Intent(this, screen_home.class));
     }
 
     public void registration(View view) {

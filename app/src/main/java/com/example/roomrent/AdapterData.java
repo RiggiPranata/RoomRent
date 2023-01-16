@@ -14,15 +14,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
-
+    Context context;
     ArrayList<Rooms> arrayListRoom;
     LayoutInflater inflater;
 
     public AdapterData(Context context, ArrayList<Rooms> arrayListRoom) {
+        this.context =context;
         this.arrayListRoom = arrayListRoom;
-        this.inflater = LayoutInflater.from(context);
+        inflater = LayoutInflater.from(context);
     }
 
     @NonNull
@@ -36,10 +38,17 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
     public void onBindViewHolder(@NonNull HolderData holder, int position) {
         final Rooms rooms = arrayListRoom.get(position);
 
-        holder.nameRoom.setText(rooms.getName_room());
+        holder.nameRoom.setText(rooms.getRoom_name());
         holder.floorRoom.setText(rooms.getFloor());
         holder.buildRoom.setText(rooms.getBuilding());
-        holder.isReady.setText(rooms.getIs_ready());
+        String Ready = rooms.getIs_ready();
+        String isReady = null;
+        if (Ready.equals("0")){
+            isReady = "Available";
+        }else if(Ready.equals("1")){
+            isReady = "Booked";
+        }
+        holder.isReady.setText(isReady);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +72,7 @@ public class AdapterData extends RecyclerView.Adapter<AdapterData.HolderData> {
     public class HolderData extends RecyclerView.ViewHolder {
 
         TextView nameRoom,floorRoom,buildRoom,isReady;
-        ImageView imageRoom;
+//        ImageView imageRoom;
 
         public HolderData(@NonNull View itemView) {
             super(itemView);

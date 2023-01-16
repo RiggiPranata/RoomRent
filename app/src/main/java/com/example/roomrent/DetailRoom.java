@@ -7,7 +7,8 @@ import android.widget.TextView;
 
 public class DetailRoom extends AppCompatActivity {
 
-    TextView DetailTitelRoom,nameRoom,floorRoom,buildingRoom,isReady;
+    TextView nameRoom,floorRoom,buildingRoom,roomReady;
+    String isReady;
 
 
     @Override
@@ -18,12 +19,18 @@ public class DetailRoom extends AppCompatActivity {
         nameRoom = findViewById(R.id.nameRoom);
         floorRoom = findViewById(R.id.floorRoom);
         buildingRoom = findViewById(R.id.buildingRoom);
-        isReady = findViewById(R.id.isReady);
+        roomReady =findViewById(R.id.roomReady);
 
         Rooms rooms = getIntent().getParcelableExtra("ROOM");
-        nameRoom.setText(rooms.getName_room());
+        nameRoom.setText(rooms.getRoom_name());
         floorRoom.setText(rooms.getFloor());
         buildingRoom.setText(rooms.getBuilding());
-        isReady.setText(rooms.getIs_ready());
+        String Ready = rooms.getIs_ready();
+        if (Ready.equals("0")){
+            isReady = "Available";
+        }else if(Ready.equals("1")){
+            isReady = "Booked";
+        }
+        roomReady.setText(isReady);
     }
 }
