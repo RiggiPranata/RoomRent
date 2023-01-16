@@ -63,6 +63,8 @@ public class Room extends AppCompatActivity {
                     recyclerView = findViewById(R.id.rvData);
                     recyclerView.setLayoutManager(new LinearLayoutManager(Room.this));
                     recyclerView.setHasFixedSize(true);
+                    Toast.makeText(Room.this, "success load data", Toast.LENGTH_SHORT).show();
+                    Log.d("volley", "load data room success ");
                     adapterData = new AdapterData(Room.this, listData);
                     recyclerView.setAdapter(adapterData);
                     adapterData.notifyDataSetChanged();

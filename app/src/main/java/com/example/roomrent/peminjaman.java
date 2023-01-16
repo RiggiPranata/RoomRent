@@ -119,6 +119,7 @@ public class peminjaman extends AppCompatActivity {
                 buttonSubmit.setOnClickListener(v -> postRequest());
 
             }
+
     private void postRequest(){
         RequestQueue requestQueue = Volley.newRequestQueue(this);
 
@@ -126,7 +127,7 @@ public class peminjaman extends AppCompatActivity {
                 Request.Method.POST, url, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                Toast.makeText(peminjaman.this, "Success inster data ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(peminjaman.this, "Success Insert data ", Toast.LENGTH_SHORT).show();
                 Log.d("volley", "success insert data ");
             }
 
@@ -140,20 +141,23 @@ public class peminjaman extends AppCompatActivity {
             @Override
             protected Map<String,String> getParams() {
                 Map<String, String> params = new HashMap<String, String>();
-                params.put("room_id","4");
+                params.put("room_id","2");
                 params.put("user_id","1");
-                params.put("time_start","10:00:00");
-                params.put("time_end","11:00:00");
-                params.put("date","2023-01-16");
-                params.put("no_telepon","0891789123");
-                params.put("remark","testing rent");
+                params.put("time_start","00:00:00");
+                params.put("time_end","24:00:00");
+                params.put("date","2023-01-18");
+                params.put("nama","test");
+                params.put("no_telepon","089823412");
+                params.put("remark","ujian uas");
                 return params;
             }
 
             @Override
-            public Map<String,String> getHeaders() throws AuthFailureError{
+            public Map<String,String> getHeaders() throws AuthFailureError {
                 Map<String,String> params = new HashMap<String,String>();
                 params.put("Content-Type","application/x-www-form-urlencoded");
+                params.put("Content-Length", "130");
+                params.put("Host","localhost");
                 return params;
             }
 

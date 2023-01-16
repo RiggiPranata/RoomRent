@@ -267,6 +267,7 @@
             <Button
                 android:id="@+id/buttonSubmitRegis"
                 android:layout_width="150dp"
+                android:onClick="submit"
                 style="@style/Theme.MaterialComponents.DayNight.DarkActionBar"
                 android:layout_height="55dp"
                 android:layout_toEndOf="@+id/buttonCancelRegis"
